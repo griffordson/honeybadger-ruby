@@ -16,7 +16,6 @@ namespace :honeybadger do
 
         options = [
           'deploy',
-          '--environment', fetch(:honeybadger_env, fetch(:rails_env, 'production')),
           '--revision', revision,
           '--repository', fetch(:repo_url),
           '--user', fetch(:honeybadger_user, ENV['USER'] || ENV['USERNAME'])
